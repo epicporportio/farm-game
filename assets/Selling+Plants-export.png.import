@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drka6yy70rt6w"
-path="res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"
+uid="uid://b6fwgv8hfx67f"
+path="res://.godot/imported/Selling+Plants-export.png-1030fd9512d05bd93fdb7fe540e57687.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Farm_Tiles.png"
-dest_files=["res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"]
+source_file="res://assets/Selling+Plants-export.png"
+dest_files=["res://.godot/imported/Selling+Plants-export.png-1030fd9512d05bd93fdb7fe540e57687.ctex"]
 
 [params]
 

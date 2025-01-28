@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drka6yy70rt6w"
-path="res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"
+uid="uid://dgjy8k8ogs64y"
+path="res://.godot/imported/coin.png-f04b9cd408b88aba3ab0966b4da32df0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Farm_Tiles.png"
-dest_files=["res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"]
+source_file="res://assets/coin.png"
+dest_files=["res://.godot/imported/coin.png-f04b9cd408b88aba3ab0966b4da32df0.ctex"]
 
 [params]
 

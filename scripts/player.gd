@@ -3,6 +3,9 @@ extends CharacterBody2D
 var speed = 60
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func _ready() -> void:
+	pass
+
 func _physics_process(delta):
 	var motion = Vector2.ZERO
 
@@ -39,3 +42,10 @@ func _physics_process(delta):
 	# Execute movement
 	velocity = motion.normalized() * speed
 	move_and_slide()
+	
+func can_sell():
+	pass
+
+func can_buy():
+	pass
+	

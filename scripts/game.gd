@@ -2,11 +2,13 @@ extends Node2D
 
 var is_planting = false
 var selected_crop = 0 # 0 = none, 1 = wheat, 2 = carrot
-
+@onready var money_label: Label = $CanvasLayer/Control/ColorRect/HBoxContainer/Label
+@onready var buy_menu: PanelContainer = $Player/BuyMenu
+@onready var seed_menu: PanelContainer = $Player/SeedMenu
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	seed_menu._on_parent_ready()
 
 func _on_seed_menu_planting(plant_id: Variant) -> void:
 	is_planting = true
@@ -18,4 +20,11 @@ func _on_seed_menu_planting(plant_id: Variant) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	money_label.text = "= " + str(Global.money)
+
+func _on_buy_shop_buying() -> void:
+	buy_menu.show()
+	buy_menu.is_opened = true
+
+func _on_seed_menu_add_to_shop(plant_data: Variant, new_container: Variant) -> void:
+	buy_menu._on_add_to_shop(plant_data, new_container)

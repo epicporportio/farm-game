@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drka6yy70rt6w"
-path="res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"
+uid="uid://c4dsy14ckhvom"
+path="res://.godot/imported/carrot.png-1a6cdbacbc6378453ce9e4d30fab476b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Farm_Tiles.png"
-dest_files=["res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"]
+source_file="res://assets/carrot.png"
+dest_files=["res://.godot/imported/carrot.png-1a6cdbacbc6378453ce9e4d30fab476b.ctex"]
 
 [params]
 
