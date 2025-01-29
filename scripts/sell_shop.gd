@@ -3,6 +3,7 @@ extends StaticBody2D
 var sell_value = 0
 var crop_amount = 0
 var crop_price = 0
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -20,5 +21,8 @@ func _on_sell_zone_body_entered(body: Node2D) -> void:
 			crop_amount = Global.plant_profiles[plant_profile]["amount"]
 			crop_price = Global.plant_profiles[plant_profile]["price"]
 			sell_value += crop_amount * crop_price
+			Global.plant_profiles[plant_profile]["amount"] = 0
 		Global.money += sell_value
-		print(Global.money)
+		if sell_value > 0:
+			audio_stream_player_2d.play()
+		sell_value = 0

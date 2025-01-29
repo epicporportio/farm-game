@@ -28,3 +28,6 @@ func _on_buy_shop_buying() -> void:
 
 func _on_seed_menu_add_to_shop(plant_data: Variant, new_container: Variant) -> void:
 	buy_menu._on_add_to_shop(plant_data, new_container)
+
+func _on_buy_menu_create_bought_plant(plant_id: Variant) -> void:
+	seed_menu.create_plant_button(plant_id)

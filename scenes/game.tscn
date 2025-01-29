@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bh7h8mpxoniwr"]
+[gd_scene load_steps=25 format=3 uid="uid://bh7h8mpxoniwr"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_b85lh"]
 [ext_resource type="PackedScene" uid="uid://cqnw1i5vwv12e" path="res://scenes/player.tscn" id="1_hr15e"]
@@ -6,9 +6,13 @@
 [ext_resource type="Texture2D" uid="uid://drka6yy70rt6w" path="res://assets/Farm_Tiles.png" id="2_pfn4h"]
 [ext_resource type="PackedScene" uid="uid://2k1r7to7kbos" path="res://scenes/seed_menu.tscn" id="3_xwajo"]
 [ext_resource type="PackedScene" uid="uid://0pgakcp73di0" path="res://scenes/growing_plot.tscn" id="5_1hcjn"]
+[ext_resource type="PackedScene" uid="uid://cam4c5t5blqna" path="res://scenes/growing_tree.tscn" id="6_bvsge"]
 [ext_resource type="PackedScene" uid="uid://8gu8cyx48mqy" path="res://scenes/sell_shop.tscn" id="6_mxebf"]
 [ext_resource type="PackedScene" uid="uid://gnpe0hveo1mn" path="res://scenes/buy_menu.tscn" id="7_0n8wf"]
+[ext_resource type="PackedScene" uid="uid://c3pjni1tj035t" path="res://scenes/growing_trellis.tscn" id="8_5g2fu"]
 [ext_resource type="PackedScene" uid="uid://cb0dtund3h531" path="res://scenes/buy_shop.tscn" id="9_sjj6g"]
+[ext_resource type="AudioStream" uid="uid://cp4230d24ux22" path="res://assets/merry-farm-127398.mp3" id="12_oe6x3"]
+[ext_resource type="FontFile" uid="uid://dgy86qsoxwkxq" path="res://assets/ARCADECLASSIC.TTF" id="13_ummeg"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8ct7t"]
 load_path = "res://.godot/imported/Farm_Tiles.png-1a464e4fc57eccf732be1c8970acdb1e.ctex"
@@ -110,6 +114,23 @@ texture = ExtResource("2_pfn4h")
 
 [sub_resource type="TileSet" id="TileSet_hvh4a"]
 sources/1 = SubResource("TileSetAtlasSource_l5idt")
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pw81e"]
+
+[sub_resource type="FontVariation" id="FontVariation_c8wu6"]
+base_font = ExtResource("13_ummeg")
+
+[sub_resource type="FontVariation" id="FontVariation_bj30d"]
+base_font = ExtResource("13_ummeg")
+
+[sub_resource type="FontVariation" id="FontVariation_26jog"]
+base_font = ExtResource("13_ummeg")
+
+[sub_resource type="FontVariation" id="FontVariation_j3kc7"]
+base_font = ExtResource("13_ummeg")
+
+[sub_resource type="FontVariation" id="FontVariation_xosod"]
+base_font = ExtResource("13_ummeg")
 
 [node name="Game" type="Node2D"]
 position = Vector2(1, 1)
@@ -592,36 +613,383 @@ position = Vector2(-231, -151)
 [node name="GrowingPlot112" parent="GrowingPlots" instance=ExtResource("5_1hcjn")]
 position = Vector2(-231, -167)
 
+[node name="GrowingTrellis" type="Node" parent="."]
+
+[node name="GrowingTrellis" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis2" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis3" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis4" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis5" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis6" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis7" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis8" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -208)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis9" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis10" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis11" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis12" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis13" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis14" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis15" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis16" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -182)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis17" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis18" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis19" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis20" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis21" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis22" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis23" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis24" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -156)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis25" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis26" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis27" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis28" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis29" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis30" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis31" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis32" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -130)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis33" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis34" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis35" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis36" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis37" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis38" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis39" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis40" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -104)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis41" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-348, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis42" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-361, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis43" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-374, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis44" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-387, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis45" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-400, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis46" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-413, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis47" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-426, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrellis48" parent="GrowingTrellis" instance=ExtResource("8_5g2fu")]
+position = Vector2(-439, -78)
+scale = Vector2(0.8, 0.8)
+
+[node name="GrowingTrees" type="Node" parent="."]
+
+[node name="GrowingTree" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(120, -175)
+
+[node name="GrowingTree2" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(120, -111)
+
+[node name="GrowingTree3" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(56, -175)
+
+[node name="GrowingTree4" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(56, -111)
+
+[node name="GrowingTree5" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(-8, -175)
+
+[node name="GrowingTree6" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(-8, -111)
+
+[node name="GrowingTree7" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(-72, -175)
+
+[node name="GrowingTree8" parent="GrowingTrees" instance=ExtResource("6_bvsge")]
+position = Vector2(-72, -111)
+
 [node name="Player" parent="." instance=ExtResource("1_hr15e")]
 z_index = 1
 scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(0, 12.5)
 scale = Vector2(1.25, 1.25)
 zoom = Vector2(2.5, 2.5)
+limit_left = -767
+limit_top = -415
+limit_right = 577
+limit_bottom = 529
+limit_smoothed = true
+editor_draw_limits = true
 
 [node name="BuyMenu" parent="Player" instance=ExtResource("7_0n8wf")]
 visible = false
-offset_left = -250.0
-offset_top = -160.0
-offset_right = 750.0
-offset_bottom = 480.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.75
+offset_top = -147.5
+offset_right = 751.25
+offset_bottom = 492.5
+grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
 
 [node name="SeedMenu" parent="Player" instance=ExtResource("3_xwajo")]
 visible = false
-offset_left = -250.0
-offset_top = -160.0
-offset_right = 750.0
-offset_bottom = 480.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -248.75
+offset_top = -142.5
+offset_right = 751.25
+offset_bottom = 477.5
+grow_horizontal = 2
 scale = Vector2(0.5, 0.5)
 
 [node name="SellShop" parent="." instance=ExtResource("6_mxebf")]
-position = Vector2(119, -45)
+position = Vector2(-31, 95)
 
 [node name="BuyShop" parent="." instance=ExtResource("9_sjj6g")]
-position = Vector2(228, -46)
+position = Vector2(81, 94)
 
+[node name="WorldBoundaries" type="Node" parent="."]
+
+[node name="WorldBoundaryTop" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(0, -274)
+rotation = -3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/WorldBoundaryTop"]
+shape = SubResource("WorldBoundaryShape2D_pw81e")
+
+[node name="WorldBoundaryBottom" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(0, 380)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/WorldBoundaryBottom"]
+shape = SubResource("WorldBoundaryShape2D_pw81e")
+
+[node name="WorldBoundaryLeft" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(-525, 0)
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/WorldBoundaryLeft"]
+shape = SubResource("WorldBoundaryShape2D_pw81e")
+
+[node name="WorldBoundaryRight" type="StaticBody2D" parent="WorldBoundaries"]
+position = Vector2(292, 0)
+rotation = -1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WorldBoundaries/WorldBoundaryRight"]
+shape = SubResource("WorldBoundaryShape2D_pw81e")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_oe6x3")
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+offset_left = -341.0
+offset_top = 134.0
+offset_right = -100.0
+offset_bottom = 173.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_c8wu6")
+theme_override_font_sizes/font_size = 28
+text = "Nothing here yet..."
+
+[node name="Label5" type="Label" parent="."]
+texture_filter = 1
+offset_left = 28.0
+offset_top = -70.0
+offset_right = 240.0
+offset_bottom = 5.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("13_ummeg")
+text = "WASD to move
+Q to open seed menu
+Esc to close menu/deselect
+Click to harvest
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label6" type="Label" parent="."]
+texture_filter = 1
+offset_left = -50.0
+offset_top = 152.0
+offset_right = 162.0
+offset_bottom = 253.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_bj30d")
+theme_override_font_sizes/font_size = 18
+text = "This is where you sell your crops and buy seeds! Stand on the brown rectangle to interact.
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="."]
+texture_filter = 1
+offset_left = -77.0
+offset_top = -315.0
+offset_right = 129.0
+offset_bottom = -214.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_26jog")
+text = "These are tree plots, only plants that grow on trees can be planted here! (Apples)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label3" type="Label" parent="."]
+texture_filter = 1
+offset_left = -328.0
+offset_top = -333.0
+offset_right = -122.0
+offset_bottom = -232.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_j3kc7")
+text = "These are farm plots, only plants that grow on farmland can be planted here! (Wheat, Carrots)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label4" type="Label" parent="."]
+texture_filter = 1
+offset_left = -651.0
+offset_top = -203.0
+offset_right = -445.0
+offset_bottom = -102.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_xosod")
+text = "These are trellis plots, only plants that grow on vines can be planted here! (Grapes)"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="create_bought_plant" from="Player/BuyMenu" to="." method="_on_buy_menu_create_bought_plant"]
 [connection signal="add_to_shop" from="Player/SeedMenu" to="." method="_on_seed_menu_add_to_shop"]
 [connection signal="planting" from="Player/SeedMenu" to="." method="_on_seed_menu_planting"]
 [connection signal="buying" from="BuyShop" to="." method="_on_buy_shop_buying"]

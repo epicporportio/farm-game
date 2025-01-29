@@ -1,11 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://gnpe0hveo1mn"]
+[gd_scene load_steps=4 format=3 uid="uid://gnpe0hveo1mn"]
 
 [ext_resource type="Script" path="res://scripts/buy_menu.gd" id="1_b2fvg"]
+[ext_resource type="AudioStream" uid="uid://dj4f276ui5d0u" path="res://assets/Cash Register (Kaching) - Sound Effect (HD).mp3" id="2_r7l2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jxc5"]
 bg_color = Color(0.0674429, 0.622895, 5.77569e-07, 1)
 
-[node name="BuyMenu" type="PanelContainer"]
+[node name="BuyMenu" type="PanelContainer" groups=["buttons in shop"]]
 offset_right = 1000.0
 offset_bottom = 620.0
 script = ExtResource("1_b2fvg")
@@ -78,3 +79,7 @@ vertical_alignment = 1
 [node name="WaterTileHBox" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/WaterTileVBox"]
 layout_mode = 2
 theme_override_constants/separation = 0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_r7l2m")
+bus = &"SFX"
